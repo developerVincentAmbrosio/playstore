@@ -3,9 +3,9 @@ const supertest = require('supertest');
 const app = require('../app');
 
 describe('Express App', () => {
-    it('should return a message from GET /', () => {
+    it('should display a list of games', () => {
       return supertest(app)
-        .get('/')
+        .get('/app')
         .expect(200);
     });
   });
